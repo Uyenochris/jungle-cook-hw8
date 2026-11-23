@@ -1,0 +1,182 @@
+/* Jungle Cook - responsive styles */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Lato:wght@400;700&display=swap');
+:root{--yellow:#ffdb75;--pink:#efa7a7;--green:#b5edcb;--ink:#121212}
+*{box-sizing:border-box}
+html{min-height:100%}
+body{margin:0;color:var(--ink);font:16px Lato,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #1c5b60;outline-offset:3px}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.site-header{position:relative;z-index:10;flex-shrink:0}
+.nav-wrap{max-width:1500px;width:100%;margin:auto;min-height:108px;padding:16px 4%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo img{width:169px;height:55px;display:block}
+.main-menu{display:flex;align-items:center;gap:34px;font:26px Caveat,'Comic Sans MS',cursive;letter-spacing:1.3px}
+.main-menu a{white-space:nowrap;padding:4px 0}
+.main-menu a[aria-current="page"]:not(.login-link){border-bottom:2px solid black}
+.main-menu .login-link{padding:10px 30px;background:var(--yellow);border-radius:40px;min-width:145px;text-align:center;box-shadow:0 7px 2px #0002}
+.menu-toggle{display:none;background:none;border:0;padding:9px;z-index:12}
+.menu-toggle span{display:block;width:32px;height:2px;background:#161616;margin:7px 0}
+.page-width{width:min(1100px,85%);margin-left:auto;margin-right:auto}
+.notice{position:fixed;z-index:30;top:110px;left:50%;transform:translateX(-50%);max-width:min(650px,92vw);padding:14px 20px;border-radius:12px;background:#fff4d3;box-shadow:0 3px 12px #0003;text-align:center;font-size:14px}
+.notice.is-error{background:#ffe0e0}
+.notice.is-success{background:#e1f9e6}
+.loading{padding:30px 0;font-style:italic}
+.script-title{font:700 27px Caveat,'Comic Sans MS',cursive;letter-spacing:2px;margin:0 0 38px}
+.yellow-button,.pink-button{display:inline-block;border:0;border-radius:32px;padding:12px 26px;text-align:center;font:27px Caveat,cursive;letter-spacing:1.5px;box-shadow:0 8px 2px #0002;background:var(--yellow);color:#111;cursor:pointer}
+.yellow-button:hover,.pink-button:hover{filter:brightness(.98)}
+.pink-button{background:var(--pink)}
+.inline-button{font-size:20px;margin-top:20px}
+.site-footer{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 3%;font:16px Caveat,cursive;letter-spacing:1px}
+.footer-links{display:flex;align-items:center;justify-content:center;gap:17px;flex-wrap:wrap}
+.footer-links a:hover{text-decoration:underline}
+.socials{display:flex;gap:24px;align-items:center}
+.socials img{width:19px;height:19px}
+/* Home */
+.home-page{background:linear-gradient(#e56a62a8,#e56a62a8),url('assets/hero.jpg') center/cover fixed no-repeat}
+.home-main{flex:1;display:grid;place-items:center;padding:20px 15px 50px}
+.hero-circles{height:415px;width:470px;position:relative}
+.small-circle{position:absolute;left:310px;top:5px;width:165px;height:165px;background:#fcbcb7;border-radius:50%;display:grid;place-items:center;text-align:center;padding:30px;font:italic 12px Lato,Arial,sans-serif;z-index:0}
+.hero-circle{position:absolute;top:60px;left:0;width:355px;height:355px;background:var(--yellow);border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;z-index:1}
+.hero-circle h1{font:700 28px Caveat,cursive;letter-spacing:1.5px;margin:0 0 24px}
+.hero-circle p{line-height:1.15;font-size:16px;letter-spacing:.7px;margin:0}
+/* Login */
+.login-page{background:var(--yellow)}
+.auth-layout{flex:1;width:min(750px,82%);margin:35px auto 50px;display:flex;justify-content:space-between;gap:115px}
+.auth-panel{width:280px}
+.login-panel{padding-top:130px}
+.auth-panel h1,.auth-panel h2{font-size:32px;letter-spacing:3px;font-weight:400;margin:0 0 35px}
+.auth-panel .small-intro{font-size:13px;letter-spacing:1px;margin:0 0 2px}
+.auth-panel h2{margin-bottom:42px}
+.demo-form{display:flex;flex-direction:column}
+.demo-form input{border:0;background:transparent;border-bottom:2px solid transparent;padding:10px 0 12px;margin-bottom:21px;font-size:13px;letter-spacing:1px;border-radius:0;min-width:0}
+.demo-form input:focus{border-bottom-color:#111;outline:0}
+.demo-form input::placeholder{color:#111;opacity:1}
+.demo-form .yellow-button{margin-top:6px;padding:7px 20px;width:210px}
+.yellow-button:disabled,.pink-button:disabled{opacity:.6;cursor:wait}
+.form-message{font-size:13px;line-height:1.4;min-height:1.3em}
+/* Browse + Your Recipes */
+.green-page{background:linear-gradient(#adeec5d9,#adeec5d9),url('assets/recipe-background.jpg') center/cover fixed no-repeat}
+.recipe-list-page{padding-top:60px;padding-bottom:75px;flex:1}
+.cards-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 46px}
+.recipe-card{display:flex;min-width:0;height:265px}
+.recipe-card-picture{position:relative;width:58%;min-width:0;overflow:hidden;border-radius:23px;box-shadow:0 5px 2px #0002}
+.recipe-card-picture img{width:100%;height:100%;display:block;object-fit:cover}
+.recipe-card-content{width:42%;min-width:0;background:white;border-radius:25px;box-shadow:0 6px 3px #0002;padding:27px 22px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.recipe-card-content h2{font:18px Lato,Arial,sans-serif;letter-spacing:1.5px;text-decoration:underline;text-underline-offset:5px;margin:0 0 9px;text-align:center}
+.recipe-card-content h2 a:hover{color:#855050}
+.recipe-card-content p{font-size:11px;letter-spacing:.45px;line-height:1.26;margin:0 0 8px}
+.card-stat{display:flex;align-items:center;gap:12px;margin:0 auto;font-size:11px;min-width:100px}
+.card-stat img{width:25px;height:25px;object-fit:contain}
+.my-card-wrap{max-width:540px}
+.your-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 45px}
+.card-actions{display:flex;gap:14px;margin-top:15px;justify-content:space-between}
+.card-actions .yellow-button{flex:1;font-size:22px;padding:8px 12px}
+.view-overlay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:140px;font-size:23px}
+.empty-state{padding:25px 0;max-width:550px;line-height:1.6}
+/* Recipe detail */
+.detail-page{flex:1;padding-top:60px;padding-bottom:70px}
+.detail-top{display:grid;grid-template-columns:44% 1fr;gap:40px;align-items:start}
+.detail-image-wrap{position:relative;padding:0 0 0 0}
+.detail-image-wrap img{display:block;width:100%;max-height:410px;object-fit:cover;box-shadow:4px 5px 2px #0003}
+.detail-image-wrap .vertical-name{position:absolute;left:-12px;top:30px;writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:3px;font-size:20px}
+.detail-top h2,.detail-section h2{font:23px Lato,Arial,sans-serif;letter-spacing:4px;font-weight:400;margin:0 0 22px}
+.detail-top p,.detail-section li{font-size:17px;line-height:1.35;letter-spacing:2px}
+.detail-top p{margin:0 0 25px}
+.detail-section{margin:46px 0}
+.detail-section ul,.detail-section ol{list-style-position:inside;margin:0;padding:0}
+.detail-section ul{list-style:none}
+.detail-actions{margin-top:55px}
+.detail-actions .yellow-button{font-size:20px;padding:10px 18px}
+/* Create / edit forms */
+.editor{flex:1;max-width:850px;padding-top:55px;padding-bottom:75px}
+.editor .script-title{margin-bottom:40px}
+#recipe-form{position:relative;display:flex;flex-direction:column;gap:0}
+#recipe-form input:not([type=file]),#recipe-form textarea{width:100%;border:0;border-bottom:2px solid transparent;resize:vertical;outline-offset:2px;background:none;letter-spacing:2px;font-size:16px;padding:20px 0;margin-bottom:35px;color:#111;min-height:58px}
+#recipe-form input::placeholder,#recipe-form textarea::placeholder{color:#111;opacity:1}
+#recipe-form input:focus,#recipe-form textarea:focus{border-bottom-color:#222}
+#recipe-form .file-row{display:flex;align-items:center;gap:12px;min-height:65px;justify-content:space-between;margin-bottom:23px;font-size:16px;letter-spacing:2px}
+.file-row .pink-button{font-size:19px;padding:8px 20px;white-space:nowrap}
+.file-name{font-size:12px;word-break:break-word;max-width:200px;letter-spacing:0}
+.dynamic-fields{position:relative;margin:18px 0 45px}
+.dynamic-fields h2{font-weight:400;font-size:21px;letter-spacing:3px;margin:0 0 25px}
+.dynamic-fields input{border:0;border-bottom:2px solid #222!important;margin-bottom:26px!important;padding:10px 0 6px!important;min-height:38px!important}
+.add-field{position:absolute;right:0;bottom:29px;width:36px;height:36px;background:var(--pink);border:0;border-radius:50%;color:white;font-size:22px;z-index:1}
+.submit-recipe{width:min(330px,100%);align-self:center;margin:20px 0;font-size:28px}
+#recipe-message{text-align:center}
+.info-page{flex:1;padding:70px 0;line-height:1.7;max-width:800px}
+@media(max-width:1120px){
+  .main-menu{gap:19px;font-size:23px}
+  .page-width{width:84%}
+  .recipe-card{height:230px}
+  .recipe-card-content{padding:15px}
+  .recipe-card-content h2{font-size:16px}
+  .recipe-card-content p{font-size:10px}
+}
+@media(max-width:900px){
+  .main-menu{display:none;position:absolute;top:92px;right:4%;background:#ffde86;border:1px solid #bca366;border-radius:12px;box-shadow:0 4px 10px #0002;padding:16px 24px;min-width:200px;flex-direction:column;align-items:stretch;text-align:center;gap:10px}
+  .main-menu.is-open{display:flex}
+  .menu-toggle{display:block}
+  .green-page .main-menu{background:#d9ffe5}
+  .home-page .main-menu{background:#ffc0b7}
+  .page-width{width:79%}
+  .cards-grid,.your-list{grid-template-columns:1fr;max-width:550px;margin:0 auto;gap:40px}
+  .recipe-card{height:262px}
+  .recipe-list-page{padding-top:55px}
+  .site-footer{font-size:13px;gap:12px}
+  .footer-links{gap:12px}
+  .auth-layout{gap:70px;width:min(640px,84%)}
+  .detail-top{gap:25px}
+  .detail-top p,.detail-section li{font-size:15px;letter-spacing:1px}
+}
+@media(max-width:650px){
+  .nav-wrap{min-height:105px;padding:15px 8%}
+  .logo img{width:145px;height:auto}
+  .main-menu{right:6%;top:85px}
+  .site-footer{display:grid;grid-template-columns:1fr auto;row-gap:18px;padding:22px 6%;font-size:13px}
+  .footer-links{grid-column:1 / -1;grid-row:2;gap:9px 15px;text-align:center}
+  .socials{grid-column:2;grid-row:1}
+  .page-width{width:83%}
+  .home-page{background-attachment:scroll}
+  .home-main{padding:20px 0 60px}
+  .hero-circles{width:350px;max-width:95vw;height:400px}
+  .hero-circle{width:300px;height:300px;left:12px;top:84px}
+  .hero-circle h1{font-size:26px}
+  .hero-circle p{font-size:13px}
+  .small-circle{width:140px;height:140px;left:200px;top:9px;padding:20px;font-size:11px}
+  .login-page{min-height:100vh}
+  .auth-layout{display:block;width:205px;margin:50px auto 40px}
+  .auth-panel{width:205px}
+  .login-panel{padding-top:0}
+  .signup-panel{margin-top:95px}
+  .auth-panel h1,.auth-panel h2{font-size:31px;white-space:nowrap}
+  .demo-form .yellow-button{width:205px}
+  .recipe-list-page{padding-top:15px}
+  .script-title{font-size:25px;margin-bottom:27px}
+  .cards-grid,.your-list{max-width:350px;gap:46px}
+  .recipe-card{height:auto;flex-direction:column}
+  .recipe-card-picture{width:100%;height:195px;border-radius:22px}
+  .recipe-card-content{width:100%;min-height:205px;padding:18px 23px;border-radius:22px}
+  .recipe-card-content h2{font-size:15px;margin-bottom:6px}
+  .recipe-card-content p{font-size:11px;margin:0 auto 7px;max-width:255px}
+  .card-stat{min-width:90px}
+  .card-actions{gap:10px}
+  .card-actions .yellow-button{font-size:21px}
+  .detail-page{padding-top:30px}
+  .detail-top{display:block}
+  .detail-image-wrap{max-width:350px;margin:0 auto 55px}
+  .detail-image-wrap img{max-height:350px;aspect-ratio:1;object-fit:cover}
+  .detail-top h2,.detail-section h2{font-size:21px;margin:28px 0 14px}
+  .detail-top p,.detail-section li{font:20px Caveat,cursive;letter-spacing:2px}
+  .detail-top p{margin-bottom:15px}
+  .detail-section{margin:35px 0}
+  .editor{padding-top:50px;padding-bottom:40px}
+  .editor .script-title{margin-bottom:35px}
+  #recipe-form input:not([type=file]),#recipe-form textarea{font-size:14px;margin-bottom:18px}
+  #recipe-form .file-row{font-size:14px}
+  .dynamic-fields{margin:15px 0 30px}
+  .dynamic-fields h2{font-size:20px}
+}
+@media(max-width:370px){.hero-circles{transform:scale(.85)}.site-footer{font-size:11px}}

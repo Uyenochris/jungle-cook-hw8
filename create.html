@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jungle Cook | Create Recipe</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="firebase-auth.js" type="module"></script>
+  <script src="recipes.js" type="module"></script>
+</head>
+<body class="plain-page" data-page="create">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="Jungle Cook home"><img src="assets/logo.png" alt="The Jungle Cook" width="169" height="55"></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-menu" id="main-menu" aria-label="Main navigation">
+        <a href="index.html" >Home</a>
+        <a href="browse.html" >Browse</a>
+        <a href="create.html" aria-current="page">Create Recipe</a>
+        <a href="your-recipes.html" class="your-recipes-link"  hidden>Your Recipes</a>
+        <a href="login.html" class="login-link" >Login</a>
+      </nav>
+    </div>
+  </header>
+  <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+  <main class="editor page-width">
+    <h1 class="script-title" id="editor-heading">Hey Chef, create your recipe!</h1>
+    <form id="recipe-form">
+      <div class="file-row"><span id="image-label">Add Recipe Image</span><label class="pink-button" for="recipe-image">Attach file</label><input id="recipe-image" type="file" accept="image/*" hidden><span id="file-name" class="file-name"></span></div>
+      <label class="sr-only" for="recipe-name">Recipe Name</label><input id="recipe-name" name="name" placeholder="Recipe Name" required maxlength="90">
+      <label class="sr-only" for="recipe-desc">Recipe Description</label><textarea id="recipe-desc" name="description" placeholder="Recipe Description" rows="2" required maxlength="1500"></textarea>
+      <label class="sr-only" for="recipe-time">Recipe Total Time</label><input id="recipe-time" name="time" placeholder="Recipe Total Time (example: 30 min)" required maxlength="45">
+      <label class="sr-only" for="recipe-servings">Recipe Serving Size</label><input id="recipe-servings" name="servings" placeholder="Recipe Serving Size (example: 4 servings)" required maxlength="45">
+      <section class="dynamic-fields"><h2>Enter Ingredients:</h2><div id="ingredients-fields"></div><button type="button" class="add-field" data-add="ingredient" aria-label="Add another ingredient">+</button></section>
+      <section class="dynamic-fields"><h2>Enter Instructions:</h2><div id="instructions-fields"></div><button type="button" class="add-field" data-add="instruction" aria-label="Add another instruction">+</button></section>
+      <button class="pink-button submit-recipe" type="submit" id="submit-recipe">Create Recipe</button>
+      <p class="form-message" id="recipe-message" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <span>Copyright © 2019 The Jungle Cook</span>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="login.html">Login</a><a href="browse.html">Recipes by Category</a><a href="privacy.html">Privacy and Copyright</a><a href="create.html">Create Recipe</a><a href="your-recipes.html">Your Recipes</a>
+    </nav>
+    <div class="socials"><img src="assets/facebook.svg" alt="Facebook icon"><img src="assets/instagram.svg" alt="Instagram icon"></div>
+  </footer>
+</body>
+</html>

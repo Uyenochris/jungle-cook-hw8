@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jungle Cook | Privacy and Copyright</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="firebase-auth.js" type="module"></script>
+  <script src="recipes.js" type="module"></script>
+</head>
+<body class="plain-page" data-page="privacy">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="Jungle Cook home"><img src="assets/logo.png" alt="The Jungle Cook" width="169" height="55"></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-menu" id="main-menu" aria-label="Main navigation">
+        <a href="index.html" >Home</a>
+        <a href="browse.html" >Browse</a>
+        <a href="create.html" >Create Recipe</a>
+        <a href="your-recipes.html" class="your-recipes-link"  hidden>Your Recipes</a>
+        <a href="login.html" class="login-link" >Login</a>
+      </nav>
+    </div>
+  </header>
+  <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+  <main class="page-width info-page"><h1 class="script-title">Privacy and Copyright</h1><p>This class project is a practice recipe website. Photos and design assets were provided with the N315 Jungle Cook assignment.</p><p>Firebase handles email/password sign-in. Recipes you create are saved in this browser for your account. Please do not enter private information in recipe fields.</p><p><a href="browse.html" class="yellow-button inline-button">Browse Recipes</a></p></main>
+  <footer class="site-footer">
+    <span>Copyright © 2019 The Jungle Cook</span>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="login.html">Login</a><a href="browse.html">Recipes by Category</a><a href="privacy.html">Privacy and Copyright</a><a href="create.html">Create Recipe</a><a href="your-recipes.html">Your Recipes</a>
+    </nav>
+    <div class="socials"><img src="assets/facebook.svg" alt="Facebook icon"><img src="assets/instagram.svg" alt="Instagram icon"></div>
+  </footer>
+</body>
+</html>

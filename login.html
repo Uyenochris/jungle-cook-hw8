@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jungle Cook | Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="firebase-auth.js" type="module"></script>
+  <script src="recipes.js" type="module"></script>
+</head>
+<body class="login-page" data-page="login">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html" aria-label="Jungle Cook home"><img src="assets/logo.png" alt="The Jungle Cook" width="169" height="55"></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-menu" id="main-menu" aria-label="Main navigation">
+        <a href="index.html" >Home</a>
+        <a href="browse.html" >Browse</a>
+        <a href="create.html" >Create Recipe</a>
+        <a href="your-recipes.html" class="your-recipes-link"  hidden>Your Recipes</a>
+        <a href="login.html" class="login-link" aria-current="page">Login</a>
+      </nav>
+    </div>
+  </header>
+  <div class="notice" id="notice" role="status" aria-live="polite" hidden></div>
+  <main class="auth-layout">
+    <section class="auth-panel login-panel">
+      <h1>Login Here!</h1>
+      <form class="demo-form" data-demo-form="login">
+        <label class="sr-only" for="login-email">Email Address</label><input id="login-email" type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        <label class="sr-only" for="login-password">Password</label><input id="login-password" type="password" name="password" placeholder="Password" required minlength="6" autocomplete="current-password">
+        <button class="yellow-button" type="submit">Login</button><p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="auth-panel signup-panel"><p class="small-intro">don't have an account?</p><h2>Sign Up!</h2>
+      <form class="demo-form" data-demo-form="signup">
+        <label class="sr-only" for="signup-first">First Name</label><input id="signup-first" type="text" name="firstName" placeholder="First Name" required autocomplete="given-name">
+        <label class="sr-only" for="signup-last">Last Name</label><input id="signup-last" type="text" name="lastName" placeholder="Last Name" required autocomplete="family-name">
+        <label class="sr-only" for="signup-email">Email Address</label><input id="signup-email" type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        <label class="sr-only" for="signup-password">Password</label><input id="signup-password" type="password" name="password" placeholder="Password" required minlength="6" autocomplete="new-password">
+        <button class="yellow-button" type="submit">Sign Up</button><p class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>Copyright © 2019 The Jungle Cook</span>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="login.html">Login</a><a href="browse.html">Recipes by Category</a><a href="privacy.html">Privacy and Copyright</a><a href="create.html">Create Recipe</a><a href="your-recipes.html">Your Recipes</a>
+    </nav>
+    <div class="socials"><img src="assets/facebook.svg" alt="Facebook icon"><img src="assets/instagram.svg" alt="Instagram icon"></div>
+  </footer>
+</body>
+</html>
