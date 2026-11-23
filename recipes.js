@@ -1,5 +1,4 @@
-// Recipe pages use the local JSON data file and browser storage for recipes people create.
-// The browser storage key includes the Firebase user ID so accounts stay separated.
+
 const $ = selector => document.querySelector(selector);
 const page = document.body.dataset.page;
 let cachedRecipes;
