@@ -7,7 +7,8 @@ This is my Jungle Cook website for N315. You can look at recipes and make your o
 https://in-info-web4.luddy.indianapolis.iu.edu/~cjuyeno/jungle-cook-hw8/
 
 ## GitHub
-Add GitHub link here.
+
+https://github.com/Uyenochris/jungle-cook-hw8
 
 ## What It Does
 - Home and login pages
